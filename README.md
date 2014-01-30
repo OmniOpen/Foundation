@@ -48,3 +48,11 @@ public void AddUser(string userName, int age, IAddress address)
 }
 
 ```
+
+
+##Release Notes
+1.0.1 (2014-01-30)
+* Fixed bug where null reference exception is thrown while validating null generic typed arguments
+
+1.0.0 (2014-01-30)
+* Initial release including helper methods for basic argument validation
