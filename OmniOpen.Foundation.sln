@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{31EC07E5-1C42-4F15-88A5-075DF7C511BD}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmniOpen.Foundation", "OmniOpen.Foundation\OmniOpen.Foundation.csproj", "{E866A185-8934-4E83-B98E-0079280EDD61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmniOpen.Foundation.Test.Unit", "OmniOpen.Foundation.Test.Unit\OmniOpen.Foundation.Test.Unit.csproj", "{6FD5FE22-0F49-4E99-A7A6-35F05A02F8C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B1D0FFD0-B273-41D2-83D6-6EBE5E8AB882}"
+	ProjectSection(SolutionItems) = preProject
+		OmniOpen.Foundation.Test.Unit.runsettings = OmniOpen.Foundation.Test.Unit.runsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E866A185-8934-4E83-B98E-0079280EDD61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E866A185-8934-4E83-B98E-0079280EDD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E866A185-8934-4E83-B98E-0079280EDD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E866A185-8934-4E83-B98E-0079280EDD61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD5FE22-0F49-4E99-A7A6-35F05A02F8C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD5FE22-0F49-4E99-A7A6-35F05A02F8C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD5FE22-0F49-4E99-A7A6-35F05A02F8C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD5FE22-0F49-4E99-A7A6-35F05A02F8C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

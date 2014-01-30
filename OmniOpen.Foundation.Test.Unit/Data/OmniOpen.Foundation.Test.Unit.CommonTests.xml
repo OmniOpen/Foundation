@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+    <!-- Validation Failure Message Null -->
+    <ValidateArgument_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message null</TestDescription>
+    </ValidateArgument_InvalidValidationFailureMessages>
+
+    <!-- Validation Failure Message Empty -->
+    <ValidateArgument_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message empty</TestDescription>
+        <ValidationFailureMessage></ValidationFailureMessage>
+    </ValidateArgument_InvalidValidationFailureMessages>
+
+    <!-- Validation Failure Message Is Whitespace -->
+    <ValidateArgument_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message is whitespace</TestDescription>
+        <ValidationFailureMessage xml:space="preserve">  </ValidationFailureMessage>
+    </ValidateArgument_InvalidValidationFailureMessages>
+
+    <!-- Validation Failure Message Null -->
+    <ValidateArgumentNotNull_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message null</TestDescription>
+    </ValidateArgumentNotNull_InvalidValidationFailureMessages>
+
+    <!-- Validation Failure Message Empty -->
+    <ValidateArgumentNotNull_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message empty</TestDescription>
+        <ValidationFailureMessage></ValidationFailureMessage>
+    </ValidateArgumentNotNull_InvalidValidationFailureMessages>
+
+    <!-- Validation Failure Message Is Whitespace -->
+    <ValidateArgumentNotNull_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message is whitespace</TestDescription>
+        <ValidationFailureMessage xml:space="preserve">  </ValidationFailureMessage>
+    </ValidateArgumentNotNull_InvalidValidationFailureMessages>
+
+    <!-- Argument Null -->
+    <ValidateArgumentNotNullOrEmpty_InvalidArguments>
+        <TestDescription>Argument null</TestDescription>        
+    </ValidateArgumentNotNullOrEmpty_InvalidArguments>
+    
+        <!-- Argument Empty -->
+    <ValidateArgumentNotNullOrEmpty_InvalidArguments>
+        <TestDescription>Argument empty</TestDescription>
+        <Argument></Argument>
+    </ValidateArgumentNotNullOrEmpty_InvalidArguments>
+
+    <!-- Validation Failure Message Null -->
+    <ValidateArgumentNotNullOrEmpty_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message null</TestDescription>
+    </ValidateArgumentNotNullOrEmpty_InvalidValidationFailureMessages>
+
+    <!-- Validation Failure Message Empty -->
+    <ValidateArgumentNotNullOrEmpty_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message empty</TestDescription>
+        <ValidationFailureMessage></ValidationFailureMessage>
+    </ValidateArgumentNotNullOrEmpty_InvalidValidationFailureMessages>
+
+    <!-- Validation Failure Message Is Whitespace -->
+    <ValidateArgumentNotNullOrEmpty_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message is whitespace</TestDescription>
+        <ValidationFailureMessage xml:space="preserve">  </ValidationFailureMessage>
+    </ValidateArgumentNotNullOrEmpty_InvalidValidationFailureMessages>
+
+    <!-- Argument Null -->
+    <ValidateArgumentNotNullOrWhitespace_InvalidArguments>
+        <TestDescription>Argument null</TestDescription>
+    </ValidateArgumentNotNullOrWhitespace_InvalidArguments>
+
+    <!-- Argument Empty -->
+    <ValidateArgumentNotNullOrWhitespace_InvalidArguments>
+        <TestDescription>Argument null</TestDescription>
+        <Argument></Argument>
+    </ValidateArgumentNotNullOrWhitespace_InvalidArguments>
+
+    <!-- Argument is Whitespace -->
+    <ValidateArgumentNotNullOrWhitespace_InvalidArguments>
+        <TestDescription>Argument is whitespace</TestDescription>
+        <Arument xml:space="preserve">  </Arument>
+    </ValidateArgumentNotNullOrWhitespace_InvalidArguments>
+
+    <!-- Validation Failure Message Null -->
+    <ValidateArgumentNotNullOrWhitespace_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message null</TestDescription>
+    </ValidateArgumentNotNullOrWhitespace_InvalidValidationFailureMessages>
+
+    <!-- Validation Failure Message Empty -->
+    <ValidateArgumentNotNullOrWhitespace_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message empty</TestDescription>
+        <ValidationFailureMessage></ValidationFailureMessage>
+    </ValidateArgumentNotNullOrWhitespace_InvalidValidationFailureMessages>
+
+    <!-- Validation Failure Message Is Whitespace -->
+    <ValidateArgumentNotNullOrWhitespace_InvalidValidationFailureMessages>
+        <TestDescription>Validation failure message is whitespace</TestDescription>
+        <ValidationFailureMessage xml:space="preserve">  </ValidationFailureMessage>
+    </ValidateArgumentNotNullOrWhitespace_InvalidValidationFailureMessages>
+</Root>
