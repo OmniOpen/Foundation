@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OpenDev.Foundation")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("OmniOpen Foundation")]
+[assembly: AssemblyDescription("A library for the most ubiquitous boiler plate code")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OpenDev.Foundation")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyCompany("Jerome Bell (jeromebell0509@gmail.com)")]
+[assembly: AssemblyProduct("OmniOpen Foundation")]
+[assembly: AssemblyCopyright("Copyright (C) 2014 Jerome Bell (jeromebell0509@gmail.com)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

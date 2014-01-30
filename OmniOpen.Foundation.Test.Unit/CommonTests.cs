@@ -1,4 +1,19 @@
-﻿using System;
+﻿//  Copyright (C) 2014 Jerome Bell (jeromebell0509@gmail.com)
+//
+//  This file is part of OmniOpen Test.
+//  OmniOpen Test is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  OmniOpen Test is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with OmniOpen Test.  If not, see <http://www.gnu.org/licenses/>.
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq.Expressions;
 using FluentAssertions;
@@ -77,7 +92,7 @@ namespace OmniOpen.Foundation.Test.Unit
             //assert
 
             actualException.Message
-                .Should().NotStartWith(Environment.NewLine, "because we supplied no custom error message and when one is supplied the final error message starts with it and is proceeded by a new line");
+                .Should().NotStartWith(Environment.NewLine, "because error messages are prefixed with the custom error message followed by a new line");
 
             actualException.ParamName
             .Should().Be("invalidArgument");
@@ -114,8 +129,8 @@ namespace OmniOpen.Foundation.Test.Unit
 
             //act & assert
 
-            invocation.ShouldThrow<ArgumentException>()
-                .And.Message.Should().NotStartWith(Environment.NewLine, "because when a custom error message is supplied the final error message starts with it and is proceeded by a new line");
+            invocation.ShouldThrow<ArgumentException>(testDescription)
+                .And.Message.Should().NotStartWith(Environment.NewLine, "{0} > {1}", testDescription, "because error messages are prefixed with the custom error message followed by a new line");
         }
 
         [TestMethod]
@@ -200,7 +215,7 @@ namespace OmniOpen.Foundation.Test.Unit
             //assert
 
             actualArgument.Message
-                .Should().NotStartWith(Environment.NewLine, "because we supplied no custom error message and when one is supplied the final error message starts with it and is proceeded by a new line");
+                .Should().NotStartWith(Environment.NewLine, "because error messages are prefixed with the custom error message followed by a new line");
 
             actualArgument.ParamName
                 .Should().Be("nullArgument");
@@ -222,8 +237,8 @@ namespace OmniOpen.Foundation.Test.Unit
 
             //act & assert
 
-            invocation.ShouldThrow<ArgumentException>()
-                .And.Message.Should().NotStartWith(Environment.NewLine, "because when a custom error message is supplied the final error message starts with it and is proceeded by a new line");
+            invocation.ShouldThrow<ArgumentException>(testDescription)
+                .And.Message.Should().NotStartWith(Environment.NewLine, "{0} > {1}", testDescription, "because error messages are prefixed with the custom error message followed by a new line");
         }
 
         [TestMethod]
@@ -299,15 +314,15 @@ namespace OmniOpen.Foundation.Test.Unit
 
             //act
 
-            actualException = invocation.ShouldThrow<ArgumentException>().Subject.First();
+            actualException = invocation.ShouldThrow<ArgumentException>(testDescription).Subject.First();
 
             //assert
 
             actualException.Message
-                .Should().NotStartWith(Environment.NewLine, "because when a custom error message is supplied the final error message starts with it and is proceeded by a new line");
+                .Should().NotStartWith(Environment.NewLine, "{0} > {1}", testDescription, "because error messages are prefixed with the custom error message followed by a new line");
 
             actualException.ParamName
-                .Should().Be("argument");
+                .Should().Be("argument", testDescription);
         }
 
         [TestMethod]
@@ -342,7 +357,7 @@ namespace OmniOpen.Foundation.Test.Unit
 
             //act
 
-            actualException = invocation.ShouldThrow<ArgumentException>().Subject.First();
+            actualException = invocation.ShouldThrow<ArgumentException>(testDescription).Subject.First();
 
             //assert
 
@@ -415,7 +430,7 @@ namespace OmniOpen.Foundation.Test.Unit
 
             //act & assert
 
-            actualException = invocation.ShouldThrow<ArgumentException>().Subject.First();
+            actualException = invocation.ShouldThrow<ArgumentException>(testDescription).Subject.First();
 
             //assert
 
@@ -443,7 +458,7 @@ namespace OmniOpen.Foundation.Test.Unit
 
             //act
 
-            actualException = invocation.ShouldThrow<ArgumentException>().Subject.First();
+            actualException = invocation.ShouldThrow<ArgumentException>(testDescription).Subject.First();
 
             //assert
 
