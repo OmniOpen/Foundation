@@ -52,7 +52,8 @@ namespace OmniOpen.Foundation
                 //throw an ArgumentException if validation fails
                 if (!validator.Compile()(argument.Compile()()))
                 {
-                    string argumentName = (argument.Body as MemberExpression).Member.Name;
+                    MemberExpression argumentExpressionBody = argument.Body as MemberExpression ?? ((argument.Body as UnaryExpression).Operand as MemberExpression);
+                    string argumentName = argumentExpressionBody.Member.Name;
 
                     throw new ArgumentException(GetNullIfWhitespace(validationFailureMessage), argumentName);
                 }
@@ -67,7 +68,6 @@ namespace OmniOpen.Foundation
         /// <summary>
         ///     Validates that an argument is not null throwing an <see cref="ArgumentNullException"/> with the proper name of <paramref name="argument"/>
         /// </summary>
-        /// <typeparam name="TArgument">the argument type</typeparam>
         /// <param name="this">the invoking method</param>
         /// <param name="argument">an expression of the argument to be validated</param>
         /// <param name="validationFailureMessage">

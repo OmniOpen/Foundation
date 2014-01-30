@@ -26,7 +26,19 @@ namespace OmniOpen.Foundation.Test.Unit
     [TestClass]
     public class CommonTests
     {
+        private const string GenericArgumentName = "dummyArgument";
+
         public TestContext TestContext { get; set; }
+
+        private void ValidateArgumentWithGenericTypedArgument<T>(T dummyArgument)
+        {
+            this.ValidateArgument(() => dummyArgument, x => x != null);
+        }
+
+        private void ValidateArgumentNotNullWithGenericTypedArgument<T>(T dummyArgument)
+        {
+            this.ValidateArgumentNotNull(() => dummyArgument);
+        }
 
         [TestMethod]
         public void ValidateArgument_NullInvokingObject_DataIsValidated()
@@ -149,7 +161,22 @@ namespace OmniOpen.Foundation.Test.Unit
 
             invocation.ShouldThrow<ArgumentException>()
                 .And.Message.Should().Contain(ValidationFailureMessage);
-        }				
+        }
+
+        [TestMethod]
+        public void ValidateArgument_ArgumentIsGenericTypeAndNull_ThrowsArgumentException()
+        {
+            Action invocation;
+
+            //arrange
+
+            invocation = () => this.ValidateArgumentWithGenericTypedArgument<string>(null);
+
+            //act & assert
+
+            invocation.ShouldThrow<ArgumentException>()
+                .And.ParamName.Should().Be(GenericArgumentName);
+        }
 
         [TestMethod]
         public void ValidateArgumentNotNull_NullInvokingObject_ValidationPerformed()
@@ -265,6 +292,21 @@ namespace OmniOpen.Foundation.Test.Unit
 
             actualArgument.ParamName
                 .Should().Be("nullArgument");
+        }
+
+        [TestMethod]
+        public void ValidateArgumentNotNull_ArgumentIsGenericTypeAndNull_ThrowsArgumentNullException()
+        {
+            Action invocation;
+
+            //arrange
+
+            invocation = () => this.ValidateArgumentNotNullWithGenericTypedArgument<string>(null);
+
+            //act & assert
+
+            invocation.ShouldThrow<ArgumentNullException>()
+                .And.ParamName.Should().Be(GenericArgumentName);
         }
 
         [TestMethod]

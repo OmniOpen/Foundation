@@ -11,7 +11,7 @@
     <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial release including helper methods for basic argument validation</releaseNotes>
+    <releaseNotes>Fixed bug where null reference exception is thrown while validating null generic typed arguments</releaseNotes>
     <copyright>Copyright (C) 2014 Jerome Bell (jeromebell0509@gmail.com)</copyright>
     <tags>Fluent Argument Validation</tags>
   </metadata>
